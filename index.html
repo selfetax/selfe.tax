@@ -5,6 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Friendly UK-based help with personal tax returns and Making Tax Digital." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="James | Selfe Tax" />
     <meta property="og:image" content="https://selfe.tax/assets/Selfe-Tax-Logo.webp" />
     <meta property="og:title" content="Selfe Tax | Friendly Tax Help in the UK" />
     <meta property="og:description"
@@ -27,6 +29,34 @@
             justify-content: center;
             min-height: 100vh;
         }
+
+        input[type="email"] {
+            padding: 0.5rem;
+            border-radius: 5px;
+            border: none;
+            margin-top: 1rem;
+            margin-right: 0.5rem;
+            width: 200px;
+        }
+
+        form button {
+            background: #1e64b6;
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+
+        form button:hover {
+            background: #15508f;
+        }
+
+        form {
+            margin-top: 1.5rem;
+        }
+
 
         img {
             max-width: 200px;
@@ -62,6 +92,17 @@
             margin-top: 3rem;
             color: #d0d0d0;
         }
+
+        .sr-only {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            border: 0;
+        }
     </style>
 </head>
 
@@ -76,15 +117,25 @@
         </video>
         <p>Friendly UK-based help with personal tax returns and Making Tax Digital.</p>
         <p><em>Professional. Personable. Plain English tax help.</em></p>
-        <p><strong>Website launching April 2026</strong></p>
         <p>Questions about your tax return or crypto reporting? I'm happy to help.</p>
+        <p><strong>Website launching April 2026</strong></p>
         <!-- Contact Link -->
         <a href="mailto:contact@selfe.tax">Contact Me</a>
 
         <!-- Notify Me Form -->
         <form action="https://formsubmit.co/contact@selfe.tax" method="POST">
-            <input type="email" name="email" placeholder="Your email" required>
+            <label for="email" class="sr-only">Email address</label>
+            <input type="email" name="email" id="email" placeholder="Your email" required>
+
+            <!-- Hidden subject line -->
+            <input type="hidden" name="_subject" value="Potential client when launch: {{email}}">
+
+            <!-- Prevent FormSubmit branding in response -->
+            <input type="hidden" name="_template" value="table">
+
+            <!-- Redirect to a custom thank-you page -->
             <input type="hidden" name="_next" value="https://selfe.tax/thanks.html">
+
             <button type="submit">Notify Me</button>
         </form>
 
