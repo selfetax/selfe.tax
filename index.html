@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Friendly UK-based help with personal tax returns and Making Tax Digital." />
     <title>Selfe Tax | Coming Soon</title>
+    <link rel="icon" href="assets/favicon.ico" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet" />
@@ -62,28 +63,21 @@
 
 <body>
     <main>
-        <video 
-  autoplay 
-  muted 
-  loop 
-  playsinline 
-  poster="assets/Selfe-Tax-Logo.webp" 
-  aria-label="Selfe Tax animated logo"
-  style="max-width: 200px; margin-bottom: 1rem; border-radius: 0.5rem;"
->
-  <source src="assets/Logo-Video.webm" type="video/webm" />
-  <source src="assets/Logo-Video.mp4" type="video/mp4" />
-  Your browser does not support the video tag.
-</video>
+        <video autoplay muted loop playsinline poster="assets/Selfe-Tax-Logo.webp" aria-label="Selfe Tax animated logo"
+            style="max-width: 200px; margin-bottom: 1rem; border-radius: 0.5rem;">
+            <source src="assets/Logo-Video.webm" type="video/webm" />
+            <source src="assets/Logo-Video.mp4" type="video/mp4" />
+            Your browser does not support the video tag.
+        </video>
         <h1>Selfe Tax</h1>
         <p>Friendly UK-based help with personal tax returns and Making Tax Digital.</p>
         <p><strong>Website launching April 2026</strong></p>
         <a href="mailto:contact@selfe.tax">Contact Me</a>
     </main>
     <footer>
-    &copy; <span id="year"></span> Selfe Tax. All rights reserved.<br>
-    Selfe Tax is a trading name of Selfe Assessment Ltd<br>
-    Company number 16615237 — Registered in England &amp; Wales
+        &copy; <span id="year"></span> Selfe Tax. All rights reserved.<br>
+        Selfe Tax is a trading name of Selfe Assessment Ltd<br>
+        Company number 16615237 — Registered in England &amp; Wales
     </footer>
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
